@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_2');
+/*css for menu.html*/
+body {
+    background-color: #393E41;
+    text-align: center;
+    font-family: "Itim", cursive;
+    margin: 0;
+    padding: 0;
+}
+.game-title {
+    color: #f6f7eb;
+    font-family: "Itim", cursive;
+    font-size: 5vw;
+    background-color: #5b6166;
+    padding-top: 4vw;
+    display: inline-block;
+    border-radius: 3vw;
+    height: 22vh;
+    width: 72vw;
+    
+}
+.buttons {
+    color: #f6f7eb;
+    font-family: "Itim", cursive;
+    font-size: 2vw;
+    background-color: #e94f37;
+    height: 10vh;
+    width: 22vw;
+    border-radius: 2vw;
+    border-color: #f6f7eb;
+    margin: 3px;
+    cursor: pointer;
+}
+.buttons:hover::before {
+    content: 'X  ';
+}
+.buttons:hover::after {
+    content: '  O';
+}
+
+/* css for game.html */
+.borad-display {
+    display: inline-flex;
+    background-color: #5b6166;
+    border-radius: 3vw;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    width: 25vw;
+    padding: 4vw;
+    margin-top: 1vw;
+}
+.line {
+    background-color: #f6f7eb7e;
+    border-radius: 30px;
+    height: 30px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    z-index: 1;
+}
+.game-borad {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #f6f7eb 2px solid;
+    color: #f6f7eb;
+    font-family: "Itim", cursive;
+    font-size: 7vw;
+    cursor: pointer;
+}
+.box:hover {
+    background-color: #f6f7eb3b;
+}
+.bt-0 {
+    border-top: 0;
+}
+.br-0 {
+    border-right: 0;
+}
+.bb-0 {
+    border-bottom: 0;
+}
+.bl-0 {
+    border-left: 0;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f6f7eb;
+    font-size: 2vw;
+    background-color: #393E41;
+    border-radius: 2vw;
+    height: 10vh;
+    width: 10vw;
+    margin-top: 2vw;
+}
+.resetbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resetgame {
+    color: #f6f7eb;
+    font-family: "Itim", cursive;
+    font-size: 2vw;
+    background-color: #e94f37;
+    border-radius: 2vw;
+    border-color: #f6f7eb;
+    height: 8vh;
+    width: 8vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+.resetgame:hover {
+    background-color: #ea6d5a;
+}
+.resetgame {
+    color: #f6f7eb;
+    font-family: "Itim", cursive;
+    font-size: 2vw;
+    background-color: #e94f37;
+    border-radius: 2vw;
+    border-color: #f6f7eb;
+    height: 8vh;
+    width: 8vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+.Xpoints {
+    color: #f6f7eb;
+    font-size: 2vw;
+    border: #f6f7eb 3px solid;
+    border-radius: 3vw;
+    height: 8vh;
+    width: 15vw;
+    padding-top: 1vw;
+    margin-right: 3vw;
+    margin-top: 5vh;
+    text-align: center;
+}
+.Opoints {
+    color: #f6f7eb;
+    font-size: 2vw;
+    border: #f6f7eb 3px solid;
+    border-radius: 3vw;
+    height: 8vh;
+    width: 15vw;
+    padding-top: 1vw;
+    margin-left: 3vw;
+    margin-top: 5vh;
+    text-align: center;
+}
+.points-container {
+    display:inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+/* about page */
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.about-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f6f7eb;
+    font-size: 2vw;
+    background-color: #5b6166;
+    height: 20vh;
+    width: 50vw;
+    border-radius: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+    .game-title {
+        font-size: 6vw;
+        width: 90vw;
+        height: 18vh;
+    }
+
+    .buttons {
+        font-size: 3vw;
+    }
+
+    .buttons:hover::before {
+        content: 'X  ';
+    }
+    .buttons:hover::after {
+        content: '  O';
+    }
+
+    .borad-display {
+        height: 60vh;
+        width: 90vw;
+    }
+
+    .game-borad {
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
+    }
+
+    .box {
+        font-size: 10vw;
+    }
+
+    .box:hover {
+        background-color: #f6f7eb3b;
+    }
+
+    .Xpoints, .Opoints {
+        font-size: 3vw;
+        width: 40%;
+        height: auto;
+        padding: 1vw;
+        margin: 1vw;
+    }
+
+    .resetgame {
+        font-size: 3vw;
+        height: 6vh;
+        width: 60%;
+    }
+
+    .resetgame:hover {
+        background-color: #ea6d5a;
+    }
+
+    .info {
+        font-size: 3vw;
+        height: 8vh;
+        width: 60%;
+    }
+
+    .about-info {
+        font-size: 4vw;
+        height: 10vh;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-title {
+        font-size: 8vw;
+        padding-top: 2vw;
+    }
+
+    .buttons {
+        font-size: 3vw;
+    }
+
+    .buttons:hover::before {
+        content: 'X  ';
+    }
+    .buttons:hover::after {
+        content: '  O';
+    }
+
+    .borad-display {
+        height: 50vh;
+        width: 100%;
+        margin-top: 1vw;
+    }
+
+    .game-borad {
+        grid-template-rows: repeat(3, 25vw);
+        grid-template-columns: repeat(3, 25vw);
+    }
+
+    .box {
+        font-size: 15vw;
+    }
+
+    .box:hover {
+        background-color: #f6f7eb3b;
+    }
+
+    .Xpoints, .Opoints {
+        font-size: 4vw;
+        width: 45%;
+        margin: 1vw;
+    }
+
+    .resetgame {
+        font-size: 4vw;
+        width: 50%;
+    }
+
+    .resetgame:hover {
+        background-color: #ea6d5a;
+    }
+
+    .info {
+        font-size: 4vw;
+        width: 50%;
+    }
+    
+    .about-info {
+        font-size: 4vw;
+        height: 10vh;
+        width: 75%;
+    }
+}
+
+.back-icon {
+    display: flex;
+}
